@@ -278,7 +278,7 @@ docker run -d \
   /bin/sh -c "sed -i 's/limit: .*/limit: \"500mb\"/' node_modules/body-parser/lib/types/json.js && npm start"
 ```
 
-以下为所需各组件涉及的功能点：
+不部署cyberchef-server无法使用加解密等相关功能，但不影响流量分析等基础功能，以下为所需各组件涉及的功能点：
 
 | 组件 | 影响的功能 |
 |---|---|
