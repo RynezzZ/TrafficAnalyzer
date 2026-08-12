@@ -22,6 +22,18 @@ TrafficAnalyzer 是一款面向安全分析、应急响应和流量排查场景�
 ```
 
 ---
+## 快速开始
+
+1. 从 [GitHub Releases](https://github.com/RynezzZ/TrafficAnalyzer/releases/latest) 下载并完整解压程序。
+2. 在云服务器或者本地部署cyberchef-server
+3. 启动 TrafficAnalyzer，点击“配置”，在“REST API 地址”中输入cyberchef-server开放的地址及端口。确认下方状态栏cyberchef-server与jdk状态。
+4. 在“HTTP 流量分析”中点击“快速导入”，选择 PCAP、Excel、CSV 或访问日志。
+5. 使用搜索、列筛选和路径树缩小数据范围，并点击事务查看完整详情。
+6. 根据场景进入“威胁检测”“网络层分析”“解密工作台”或其他专项模块继续分析。
+
+cyberchef-server可以填入`aHR0cDovLzQzLjE0My4yMDguNTc6NDMwMDE=`base64解码后的地址，便于初次使用时的功能测试。**但长期使用的话仍建议自行部署。**
+
+---
 
 ## 数据导入与项目管理
 
@@ -293,16 +305,6 @@ docker run -d \
 
 ---
 
-## 快速开始
-
-1. 从 [GitHub Releases](https://github.com/RynezzZ/TrafficAnalyzer/releases/latest) 下载并完整解压程序。
-2. 在云服务器或者本地部署cyberchef-server
-3. 启动 TrafficAnalyzer，点击“配置”，在“REST API 地址”中输入cyberchef-server开放的地址及端口。确认下方状态栏cyberchef-server与jdk状态。
-4. 在“HTTP 流量分析”中点击“快速导入”，选择 PCAP、Excel、CSV 或访问日志。
-5. 使用搜索、列筛选和路径树缩小数据范围，并点击事务查看完整详情。
-6. 根据场景进入“威胁检测”“网络层分析”“解密工作台”或其他专项模块继续分析。
-
----
 
 ## 使用声明
 
