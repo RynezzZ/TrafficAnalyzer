@@ -1,6 +1,6 @@
 # TrafficAnalyzer
 
-TrafficAnalyzer 是一款面向安全分析、应急响应和流量排查场景的 Windows 桌面工具。它以 PCAP 和 HTTP 数据为入口，将流量检索、请求响应还原、威胁检测、行为分析、数据解密、WebShell 分析及主动重放整合在同一个工作空间中。
+TrafficAnalyzer 是一款面向安全分析、应急响应和流量排查场景的 Windows 桌面工具。它以 PCAP 和 HTTP 数据为入口，将流量检索、请求响应还原、威胁检测、行为分析、数据解密、WebShell 分析及主动重放整合在同一个工作空间中。  [使用手册-快速开始](https://rynezzz.github.io/TrafficAnalyzer/01-getting-started.html)
 
 ![image-20260729161653444](./README.assets/image-20260729161653444.png)
 
