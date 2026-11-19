@@ -1,0 +1,30 @@
+:root {
+  --vp-c-brand-1: #284eb7;
+  --vp-c-brand-2: #355fce;
+  --vp-c-brand-3: #254ebf;
+  --vp-c-brand-soft: rgb(40 78 183 / 12%);
+  --vp-font-family-base: "Segoe UI", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+}
+
+.dark {
+  --vp-c-brand-1: #a3baff;
+  --vp-c-brand-2: #87a4fc;
+  --vp-c-brand-3: #5d7fe1;
+  --vp-c-brand-soft: rgb(135 164 252 / 15%);
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 48rem;
+}
+
+.vp-doc img {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgb(24 35 62 / 8%);
+}
+
+.vp-doc th,
+.vp-doc td {
+  vertical-align: top;
+}

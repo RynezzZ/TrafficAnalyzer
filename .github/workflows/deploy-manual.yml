@@ -1,0 +1,52 @@
+name: Publish manual to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'manual/**'
+      - '.github/workflows/deploy-manual.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: manual
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: manual/package-lock.json
+      - run: npm ci
+      - run: npm run build
+        env:
+          MANUAL_BASE: /TrafficAnalyzer/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: manual/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
